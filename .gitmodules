@@ -1,3 +1,3 @@
 [submodule "mybridge/corrosion"]
 	path = mybridge/corrosion
-	url = https://github.com/corrosion-rs/corrosion.git
+	url = https://github.com/alfatraining/corrosion.git
