@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.20)
 project(mybridge LANGUAGES CXX)
 
-if(IOS)
-    if(CMAKE_OSX_SYSROOT MATCHES "iphonesimulator")
-        set(Rust_CARGO_TARGET "aarch64-apple-ios-sim")
-    elseif(CMAKE_OSX_SYSROOT MATCHES "iphoneos")
-        set(Rust_CARGO_TARGET "aarch64-apple-ios")
-    endif()
+if(CMAKE_OSX_SYSROOT MATCHES "iPhoneSimulator")
+    set(Rust_CARGO_TARGET "aarch64-apple-ios-sim")
+elseif(CMAKE_OSX_SYSROOT MATCHES "iPhoneOS")
+    set(Rust_CARGO_TARGET "aarch64-apple-ios")
 endif()
+
+message(STATUS "CMAKE_OSX_SYSROOT=${CMAKE_OSX_SYSROOT}")
+message(STATUS "Rust_CARGO_TARGET=${Rust_CARGO_TARGET}")
 
 add_subdirectory(corrosion)
 
