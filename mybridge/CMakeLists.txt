@@ -7,7 +7,6 @@ elseif(CMAKE_OSX_SYSROOT MATCHES "iphoneos")
     set(Rust_CARGO_TARGET "aarch64-apple-ios")
 endif()
 
-set(CORROSION_USE_HOST_BUILD ON)
 set(CORROSION_VERBOSE_OUTPUT ON)
 add_subdirectory(corrosion)
 
