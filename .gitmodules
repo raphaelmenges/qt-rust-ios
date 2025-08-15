@@ -1,3 +1,6 @@
 [submodule "mybridge/corrosion"]
 	path = mybridge/corrosion
 	url = https://github.com/corrosion-rs/corrosion.git
+[submodule "mycounter/corrosion"]
+	path = mycounter/corrosion
+	url = https://github.com/corrosion-rs/corrosion.git

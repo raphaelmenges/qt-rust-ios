@@ -21,8 +21,15 @@ ApplicationWindow {
         Text {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: helloFromRust
+            text: helloFromMyCounter
             color: "white"
         }
+        
+        // Text {
+        //     horizontalAlignment: Text.AlignHCenter
+        //     verticalAlignment: Text.AlignVCenter
+        //     text: helloFromMyBrige
+        //     color: "white"
+        // }
     }
 }

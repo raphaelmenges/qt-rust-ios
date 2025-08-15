@@ -6,5 +6,5 @@ mod ffi {
 }
 
 pub fn hello_world() -> String {
-    String::from("Hello World from Rust!")
+    String::from("Hello World from Rust with CXX!")
 }

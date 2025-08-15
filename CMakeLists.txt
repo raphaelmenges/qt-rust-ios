@@ -9,7 +9,8 @@ qt_add_executable(${PROJECT_NAME}
   main.cpp
 )
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mybridge)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mycounter)
+# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mybridge)
 
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
@@ -18,7 +19,8 @@ target_link_libraries(${PROJECT_NAME}
     Qt::Qml
     Qt::Quick
   PRIVATE
-    mybridge
+    mycounter
+    # mybridge
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
