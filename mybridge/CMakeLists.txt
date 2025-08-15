@@ -1,15 +1,14 @@
 cmake_minimum_required(VERSION 3.20)
 project(mybridge LANGUAGES CXX)
 
-if(CMAKE_OSX_SYSROOT MATCHES "iPhoneSimulator")
+if(CMAKE_OSX_SYSROOT MATCHES "iphonesimulator")
     set(Rust_CARGO_TARGET "aarch64-apple-ios-sim")
-elseif(CMAKE_OSX_SYSROOT MATCHES "iPhoneOS")
+elseif(CMAKE_OSX_SYSROOT MATCHES "iphoneos")
     set(Rust_CARGO_TARGET "aarch64-apple-ios")
 endif()
 
-message(STATUS "CMAKE_OSX_SYSROOT=${CMAKE_OSX_SYSROOT}")
-message(STATUS "Rust_CARGO_TARGET=${Rust_CARGO_TARGET}")
-
+set(CORROSION_USE_HOST_BUILD ON)
+set(CORROSION_VERBOSE_OUTPUT ON)
 add_subdirectory(corrosion)
 
 corrosion_import_crate(
@@ -26,3 +25,10 @@ corrosion_add_cxxbridge(
   FILES
     lib.rs
 )
+
+if(Rust_CARGO_TARGET MATCHES "aarch64-apple-ios")
+  corrosion_add_target_rustflags(mybridgecxx
+    "-C link-arg=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
+    "-C link-arg=-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib"
+  )
+endif()
