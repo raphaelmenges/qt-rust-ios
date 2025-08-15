@@ -25,10 +25,3 @@ corrosion_add_cxxbridge(
   FILES
     lib.rs
 )
-
-if(Rust_CARGO_TARGET MATCHES "aarch64-apple-ios")
-  corrosion_add_target_rustflags(mybridgecxx
-    "-C link-arg=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
-    "-C link-arg=-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib"
-  )
-endif()
