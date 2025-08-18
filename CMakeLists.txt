@@ -9,8 +9,8 @@ qt_add_executable(${PROJECT_NAME}
   main.cpp
 )
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mycounter)
-# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mybridge)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/rust-c)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/rust-cxx)
 
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
@@ -19,8 +19,8 @@ target_link_libraries(${PROJECT_NAME}
     Qt::Qml
     Qt::Quick
   PRIVATE
-    mycounter
-    # mybridge
+    rust_c
+    rust_cxx
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

@@ -1,4 +1,4 @@
-#[cxx::bridge(namespace = "my_bridge")]
+#[cxx::bridge(namespace = "rust_cxx")]
 mod ffi {
     extern "Rust" {
         fn hello_world() -> String;
@@ -6,5 +6,5 @@ mod ffi {
 }
 
 pub fn hello_world() -> String {
-    String::from("Hello World from Rust with CXX!")
+    String::from("Hello World from Rust-CXX-crate!")
 }

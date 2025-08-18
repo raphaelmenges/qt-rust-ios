@@ -154,14 +154,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "mybridge-cxx"
-version = "0.0.0"
-dependencies = [
- "cxx",
- "cxx-build",
-]
-
-[[package]]
 name = "proc-macro2"
 version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -177,6 +169,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1885c039570dc00dcb4ff087a89e185fd56bae234ddc7f056a945bf36467248d"
 dependencies = [
  "proc-macro2",
+]
+
+[[package]]
+name = "rust-cxx"
+version = "0.0.0"
+dependencies = [
+ "cxx",
+ "cxx-build",
 ]
 
 [[package]]

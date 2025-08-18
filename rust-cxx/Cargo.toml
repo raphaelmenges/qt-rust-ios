@@ -1,12 +1,12 @@
 [package]
-name = "mybridge-cxx"
+name = "rust-cxx"
 authors = ["Raphael Menges"]
 version = "0.0.0"
 edition = "2024"
 license = "MIT"
 
 [lib]
-name = "mybridgecxx"
+name = "rustcxx"
 path = "src/lib.rs"
 crate-type = ["staticlib"]
 
