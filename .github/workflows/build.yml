@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: Setup Qt
         uses: jurplel/install-qt-action@v4
-        version: 6.8.3
+        with:
+          version: 6.8.3
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
