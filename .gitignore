@@ -1,5 +1,5 @@
 .DS_Store
 CMakeLists.txt.user
 build*
-mybridge/target
-mycounter/target
+rust-c/target
+rust-cxx/target
