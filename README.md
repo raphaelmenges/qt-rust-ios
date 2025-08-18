@@ -24,20 +24,21 @@ cmake \
 
 2. Build project via CMake: `cmake --build build-macos`
 
-### How to build for iOS or iPhone simulator
+### How to build for iOS
 
 1. Generate project via CMake:
 ```
 cmake \
--B build-ios \ # Or "build-iphone-simulator"
+-B build-ios \
 -S . \
 -DCMAKE_BUILD_TYPE=Debug \
 -DCMAKE_PREFIX_PATH="~/Qt/6.8.3/ios" \
 -DCMAKE_TOOLCHAIN_FILE="~/Qt/6.8.3/ios/lib/cmake/Qt6/qt.toolchain.cmake" \
 -DCMAKE_SYSTEM_NAME=iOS \
--DCMAKE_OSX_SYSROOT=iphoneos \ # or "iphonesimulator"
+-DCMAKE_OSX_SYSROOT=iphoneos \
 -DCMAKE_OSX_ARCHITECTURES=arm64 \
--DCMAKE_OSX_DEPLOYMENT_TARGET=16.0
+-DCMAKE_OSX_DEPLOYMENT_TARGET=16.0 \
+-DCMAKE_GENERATOR=Xcode
 ```
 
 2. Build project via CMake: `cmake --build build-ios`

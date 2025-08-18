@@ -25,11 +25,11 @@ ApplicationWindow {
             color: "white"
         }
         
-        // Text {
-        //     horizontalAlignment: Text.AlignHCenter
-        //     verticalAlignment: Text.AlignVCenter
-        //     text: helloFromRustCxxCrate
-        //     color: "white"
-        // }
+        Text {
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            text: helloFromRustCxxCrate
+            color: "white"
+        }
     }
 }

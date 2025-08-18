@@ -1,6 +1,6 @@
 [submodule "rust-cxx/corrosion"]
 	path = rust-cxx/corrosion
-	url = https://github.com/corrosion-rs/corrosion.git
+	url = https://github.com/TheVitya/corrosion.git
 [submodule "rust-c/corrosion"]
 	path = rust-c/corrosion
-	url = https://github.com/corrosion-rs/corrosion.git
+	url = https://github.com/TheVitya/corrosion.git
