@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 project(rust_c LANGUAGES CXX)
 
-if(CMAKE_OSX_SYSROOT MATCHES "iphonesimulator")
+string(TOLOWER "${CMAKE_OSX_SYSROOT}" SYSROOT_LOWER)
+if(SYSROOT_LOWER MATCHES "iphonesimulator")
     set(Rust_CARGO_TARGET "aarch64-apple-ios-sim")
-elseif(CMAKE_OSX_SYSROOT MATCHES "iphoneos")
+elseif(SYSROOT_LOWER MATCHES "iphoneos")
     set(Rust_CARGO_TARGET "aarch64-apple-ios")
 endif()
 
